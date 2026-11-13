@@ -1,0 +1,400 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme='gold'] {
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* 24K Gold Theme Tokens */
+    --lux-stage-bg: #0b0b0e;
+    --lux-stage-glow: #2a2003;
+
+    --lux-chassis-grad:
+      radial-gradient(120% 60% at 15% 0%, rgba(255, 255, 235, 0.72) 0%, rgba(255, 240, 150, 0) 55%),
+      radial-gradient(90% 50% at 90% 100%, rgba(160, 108, 0, 0.55) 0%, rgba(160, 108, 0, 0) 60%),
+      linear-gradient(138deg, #ffe866 0%, #ffd000 22%, #f2b705 45%, #fff099 54%, #e8b000 72%, #ffd700 88%, #c98e00 100%);
+    --lux-chassis-inset-bottom: rgba(133, 88, 0, 0.6);
+    --lux-chassis-glow: rgba(255, 210, 0, 0.22);
+
+    --lux-brand-bg: linear-gradient(180deg, #272210 0%, #151412 52%, #1e1a0c 100%);
+    --lux-brand-border: rgba(255, 224, 102, 0.65);
+    --lux-brand-shadow: rgba(95, 65, 0, 0.45);
+    --lux-foil-grad: linear-gradient(180deg, #fff4b8 0%, #ffd52e 52%, #d99b00 100%);
+    --lux-foil-glow: rgba(255, 213, 46, 0.35);
+
+    --lux-bezel-shadow: rgba(112, 78, 0, 0.38);
+    --lux-tray-grad: linear-gradient(180deg, #4b3b03 0%, #382b02 45%, #2d2201 100%);
+    --lux-tray-highlight: rgba(255, 230, 120, 0.2);
+    --lux-tray-shadow: rgba(120, 84, 0, 0.3);
+
+    --lux-key-grad:
+      radial-gradient(110% 70% at 30% 10%, rgba(255, 255, 230, 0.62) 0%, rgba(255, 255, 230, 0) 58%),
+      linear-gradient(168deg, #ffe97d 0%, #f7ca18 38%, #d4a000 84%, #b38000 100%);
+    --lux-key-ink: #121008;
+    --lux-key-border: rgba(255, 240, 160, 0.65);
+    --lux-key-inset-bottom: rgba(135, 88, 0, 0.45);
+
+    --lux-op-border: rgba(255, 215, 64, 0.24);
+    --lux-op-border-hover: rgba(255, 215, 64, 0.5);
+
+    --lux-tab-active-grad:
+      radial-gradient(120% 70% at 30% 10%, rgba(255, 255, 235, 0.65) 0%, rgba(255, 255, 235, 0) 60%),
+      linear-gradient(168deg, #ffec88 0%, #ffd000 45%, #e2a800 100%);
+    --lux-tab-active-border: rgba(255, 245, 190, 0.8);
+
+    --lux-accent: #f5c518;
+    --lux-accent-bright: #ffd52e;
+    --lux-accent-soft: #e6c45c;
+    --lux-muted: #b99a3c;
+    --lux-muted-dim: #8a7331;
+    --lux-surface-deep: #141518;
+    --lux-surface-panel: #1b1707;
+    --lux-border-subtle: rgba(245, 197, 24, 0.25);
+    --lux-border-strong: rgba(255, 213, 46, 0.55);
+    --lux-readout-glow: rgba(255, 213, 46, 0.25);
+    --lux-scroll-thumb: rgba(245, 197, 24, 0.42);
+  }
+
+  [data-theme='rose-gold'] {
+    /* 18K Rose Gold Theme Tokens */
+    --lux-stage-bg: #0e0a0a;
+    --lux-stage-glow: #301613;
+
+    --lux-chassis-grad:
+      radial-gradient(120% 60% at 15% 0%, rgba(255, 244, 240, 0.72) 0%, rgba(255, 214, 204, 0) 55%),
+      radial-gradient(90% 50% at 90% 100%, rgba(145, 68, 56, 0.55) 0%, rgba(145, 68, 56, 0) 60%),
+      linear-gradient(138deg, #ffded6 0%, #f4ac9c 22%, #de8676 45%, #ffeae4 54%, #d17868 72%, #f2a999 88%, #b05c4e 100%);
+    --lux-chassis-inset-bottom: rgba(128, 56, 44, 0.62);
+    --lux-chassis-glow: rgba(244, 168, 152, 0.24);
+
+    --lux-brand-bg: linear-gradient(180deg, #2a1816 0%, #171010 52%, #221412 100%);
+    --lux-brand-border: rgba(255, 202, 189, 0.65);
+    --lux-brand-shadow: rgba(96, 44, 36, 0.45);
+    --lux-foil-grad: linear-gradient(180deg, #fff0ec 0%, #ffb5a5 52%, #d47766 100%);
+    --lux-foil-glow: rgba(255, 181, 165, 0.35);
+
+    --lux-bezel-shadow: rgba(112, 52, 42, 0.4);
+    --lux-tray-grad: linear-gradient(180deg, #472520 0%, #351a16 45%, #291310 100%);
+    --lux-tray-highlight: rgba(255, 210, 198, 0.2);
+    --lux-tray-shadow: rgba(105, 48, 39, 0.32);
+
+    --lux-key-grad:
+      radial-gradient(110% 70% at 30% 10%, rgba(255, 245, 242, 0.64) 0%, rgba(255, 245, 242, 0) 58%),
+      linear-gradient(168deg, #ffe2da 0%, #efa494 38%, #cc7b6b 84%, #a85c4e 100%);
+    --lux-key-ink: #1a0b09;
+    --lux-key-border: rgba(255, 224, 216, 0.68);
+    --lux-key-inset-bottom: rgba(128, 58, 46, 0.45);
+
+    --lux-op-border: rgba(255, 186, 170, 0.26);
+    --lux-op-border-hover: rgba(255, 186, 170, 0.52);
+
+    --lux-tab-active-grad:
+      radial-gradient(120% 70% at 30% 10%, rgba(255, 245, 242, 0.65) 0%, rgba(255, 245, 242, 0) 60%),
+      linear-gradient(168deg, #ffe5de 0%, #f3a695 45%, #d67e6d 100%);
+    --lux-tab-active-border: rgba(255, 232, 226, 0.85);
+
+    --lux-accent: #f3a595;
+    --lux-accent-bright: #ffc1b3;
+    --lux-accent-soft: #e6a99c;
+    --lux-muted: #c9887b;
+    --lux-muted-dim: #926056;
+    --lux-surface-deep: #171212;
+    --lux-surface-panel: #261412;
+    --lux-border-subtle: rgba(243, 165, 149, 0.25);
+    --lux-border-strong: rgba(255, 193, 179, 0.55);
+    --lux-readout-glow: rgba(255, 186, 170, 0.28);
+    --lux-scroll-thumb: rgba(243, 165, 149, 0.42);
+  }
+
+  [data-theme='platinum'] {
+    /* Brushed Platinum Theme Tokens */
+    --lux-stage-bg: #090b0f;
+    --lux-stage-glow: #1c2430;
+
+    --lux-chassis-grad:
+      radial-gradient(120% 60% at 15% 0%, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0) 55%),
+      radial-gradient(90% 50% at 90% 100%, rgba(100, 114, 134, 0.55) 0%, rgba(100, 114, 134, 0) 60%),
+      linear-gradient(138deg, #ffffff 0%, #dde3ec 22%, #b6c1cf 45%, #f8fafd 54%, #aeb9c7 72%, #e4eaf2 88%, #8b97a8 100%);
+    --lux-chassis-inset-bottom: rgba(82, 94, 112, 0.58);
+    --lux-chassis-glow: rgba(210, 224, 245, 0.2);
+
+    --lux-brand-bg: linear-gradient(180deg, #242933 0%, #14171d 52%, #1d222b 100%);
+    --lux-brand-border: rgba(226, 234, 246, 0.65);
+    --lux-brand-shadow: rgba(45, 55, 72, 0.45);
+    --lux-foil-grad: linear-gradient(180deg, #ffffff 0%, #d8e2ef 52%, #9aa8bc 100%);
+    --lux-foil-glow: rgba(226, 234, 246, 0.32);
+
+    --lux-bezel-shadow: rgba(58, 68, 84, 0.38);
+    --lux-tray-grad: linear-gradient(180deg, #2b313c 0%, #20252e 45%, #171b22 100%);
+    --lux-tray-highlight: rgba(235, 242, 252, 0.18);
+    --lux-tray-shadow: rgba(48, 56, 70, 0.32);
+
+    --lux-key-grad:
+      radial-gradient(110% 70% at 30% 10%, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0) 58%),
+      linear-gradient(168deg, #f8fafd 0%, #d8e0eb 38%, #aeb9c9 84%, #8d99aa 100%);
+    --lux-key-ink: #0c1118;
+    --lux-key-border: rgba(255, 255, 255, 0.75);
+    --lux-key-inset-bottom: rgba(78, 90, 108, 0.45);
+
+    --lux-op-border: rgba(212, 224, 240, 0.24);
+    --lux-op-border-hover: rgba(226, 236, 250, 0.5);
+
+    --lux-tab-active-grad:
+      radial-gradient(120% 70% at 30% 10%, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0) 60%),
+      linear-gradient(168deg, #ffffff 0%, #dde4ee 45%, #b2becf 100%);
+    --lux-tab-active-border: rgba(255, 255, 255, 0.9);
+
+    --lux-accent: #cbd5e1;
+    --lux-accent-bright: #f1f5f9;
+    --lux-accent-soft: #cbd5e1;
+    --lux-muted: #94a3b8;
+    --lux-muted-dim: #64748b;
+    --lux-surface-deep: #111419;
+    --lux-surface-panel: #1b2029;
+    --lux-border-subtle: rgba(203, 213, 225, 0.24);
+    --lux-border-strong: rgba(241, 245, 249, 0.55);
+    --lux-readout-glow: rgba(226, 232, 240, 0.25);
+    --lux-scroll-thumb: rgba(203, 213, 225, 0.42);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--lux-stage-bg);
+    color: var(--lux-accent);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.lux-stage-bg {
+  background-color: var(--lux-stage-bg);
+  background-image: radial-gradient(ellipse at top, var(--lux-stage-glow) 0%, var(--lux-stage-bg) 58%);
+  transition: background-color 220ms ease;
+}
+
+/* Metallic Chassis & Lustrous Sheen */
+.gold-chassis {
+  background: var(--lux-chassis-grad);
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.85),
+    inset 0 -3px 6px var(--lux-chassis-inset-bottom),
+    0 24px 60px rgba(0, 0, 0, 0.85),
+    0 0 40px var(--lux-chassis-glow);
+  transition: box-shadow 220ms ease;
+}
+
+/* Animated Specular Metallic Shimmer Overlay */
+.gold-shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer-sweep::after {
+  content: "";
+  position: absolute;
+  inset: -60% -120%;
+  background: linear-gradient(
+    112deg,
+    transparent 38%,
+    rgba(255, 255, 245, 0.14) 46%,
+    rgba(255, 255, 255, 0.34) 50%,
+    rgba(255, 255, 245, 0.14) 54%,
+    transparent 62%
+  );
+  transform: translateX(-35%);
+  pointer-events: none;
+  animation: goldSweep 7s ease-in-out infinite;
+}
+
+@keyframes goldSweep {
+  0%, 100% {
+    transform: translateX(-38%);
+  }
+  50% {
+    transform: translateX(38%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-shimmer-sweep::after {
+    animation: none;
+    transform: none;
+    opacity: 0.2;
+  }
+}
+
+/* Lux Calc Top Brand Plate */
+.gold-brand-plate {
+  background: var(--lux-brand-bg);
+  border: 1.5px solid var(--lux-brand-border);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.22),
+    0 4px 12px var(--lux-brand-shadow);
+}
+
+.gold-text-foil {
+  background: var(--lux-foil-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 6px var(--lux-foil-glow));
+}
+
+/* Recessed Obsidian Display Housing */
+.obsidian-display-bezel {
+  background: linear-gradient(180deg, #27282d 0%, #1b1c20 100%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.65),
+    0 6px 14px var(--lux-bezel-shadow);
+}
+
+.obsidian-display-screen {
+  background: linear-gradient(180deg, #111215 0%, #17181c 100%);
+  box-shadow:
+    inset 0 3px 10px rgba(0, 0, 0, 0.85),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Smoked Keypad Well */
+.bronze-keypad-tray {
+  background: var(--lux-tray-grad);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.55),
+    inset 0 -1px 1px var(--lux-tray-highlight),
+    0 4px 10px var(--lux-tray-shadow);
+}
+
+/* Metallic Keycap */
+.btn-gold-key {
+  background: var(--lux-key-grad);
+  color: var(--lux-key-ink);
+  border: 1px solid var(--lux-key-border);
+  box-shadow:
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.78),
+    inset 0 -2px 3px var(--lux-key-inset-bottom),
+    0 3px 6px rgba(0, 0, 0, 0.36);
+  transition: transform 90ms cubic-bezier(0.16, 1, 0.3, 1), filter 120ms ease, box-shadow 90ms ease;
+}
+
+.btn-gold-key:hover {
+  filter: brightness(1.06);
+}
+
+.btn-gold-key:active {
+  transform: translateY(1.5px) scale(0.985);
+  box-shadow:
+    inset 0 2px 4px var(--lux-key-inset-bottom),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* Brushed Obsidian Operator Keycap */
+.btn-obsidian-key {
+  background:
+    radial-gradient(100% 60% at 30% 8%, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0) 55%),
+    linear-gradient(170deg, #2d2f36 0%, #1d1e23 48%, #131418 100%);
+  color: var(--lux-accent-bright);
+  border: 1px solid var(--lux-op-border);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.14),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.65),
+    0 3px 6px rgba(0, 0, 0, 0.42);
+  transition: transform 90ms cubic-bezier(0.16, 1, 0.3, 1), filter 120ms ease, border-color 120ms ease;
+}
+
+.btn-obsidian-key:hover {
+  filter: brightness(1.12);
+  border-color: var(--lux-op-border-hover);
+}
+
+.btn-obsidian-key:active {
+  transform: translateY(1.5px) scale(0.985);
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.75),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Mode Selector Active & Inactive Buttons */
+.mode-tab-active {
+  background: var(--lux-tab-active-grad);
+  color: var(--lux-key-ink);
+  border: 1px solid var(--lux-tab-active-border);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.85),
+    0 3px 8px var(--lux-tray-shadow);
+}
+
+.mode-tab-inactive {
+  background: linear-gradient(175deg, #27282d 0%, #191a1e 55%, #121316 100%);
+  color: var(--lux-accent);
+  border: 1px solid var(--lux-op-border);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.08),
+    0 3px 8px var(--lux-tray-shadow);
+}
+
+.mode-tab-inactive:hover {
+  border-color: var(--lux-op-border-hover);
+  filter: brightness(1.08);
+}
+
+/* Semantic CSS-variable driven text, input, and surface helpers */
+.lux-input {
+  background-color: var(--lux-surface-deep);
+  border: 1px solid var(--lux-border-subtle);
+  color: var(--lux-accent-bright);
+}
+.lux-input:focus {
+  outline: none;
+  border-color: var(--lux-accent-bright);
+}
+
+.lux-select-tray {
+  background-color: var(--lux-surface-panel);
+  border: 1px solid var(--lux-border-subtle);
+  color: var(--lux-accent);
+}
+.lux-select-tray:focus {
+  outline: none;
+  border-color: var(--lux-accent-bright);
+}
+
+.lux-text-bright {
+  color: var(--lux-accent-bright);
+}
+.lux-text-accent {
+  color: var(--lux-accent);
+}
+.lux-text-soft {
+  color: var(--lux-accent-soft);
+}
+.lux-text-muted {
+  color: var(--lux-muted);
+}
+.lux-text-dim {
+  color: var(--lux-muted-dim);
+}
+.lux-border-subtle {
+  border-color: var(--lux-border-subtle);
+}
+.lux-border-strong {
+  border-color: var(--lux-border-strong);
+}
+
+/* Custom sleek theme-matched scrollbars */
+.gold-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.gold-scroll::-webkit-scrollbar-track {
+  background: rgba(18, 16, 12, 0.5);
+  border-radius: 999px;
+}
+.gold-scroll::-webkit-scrollbar-thumb {
+  background: var(--lux-scroll-thumb);
+  border-radius: 999px;
+}
+.gold-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--lux-accent-bright);
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Lux Calc",
+  "description": "24K metallic gold Android-inspired luxury calculator with scientific mode, unit converter with live currency rates, finance suite, and date & time calculator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
